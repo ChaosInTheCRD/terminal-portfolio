@@ -14,5 +14,11 @@ export const EduList = styled.div`
 
   .desc {
     color: ${({ theme }) => theme.colors?.text[200]};
+    margin-bottom: 0.175rem;
+  }
+
+
+  .grade {
+    color: ${({ theme }) => theme.colors?.text[200]};
   }
 `;

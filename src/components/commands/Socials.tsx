@@ -52,26 +52,26 @@ const socials = [
   {
     id: 1,
     title: "GitHub",
-    url: "https://github.com/satnaing",
+    url: "https://github.com/chaosinthecrd",
     tab: 3,
   },
   {
     id: 2,
-    title: "Dev.to",
-    url: "https://dev.to/satnaing",
-    tab: 3,
-  },
-  {
-    id: 3,
-    title: "Facebook",
-    url: "https://www.facebook.com/satnaing.dev",
+    title: "Linkedin",
+    url: "https://www.linkedin.com/in/thomas-meadows-481584148/",
     tab: 1,
   },
   {
-    id: 4,
+    id: 3,
     title: "Instagram",
-    url: "https://instagram.com/satnaing.dev",
+    url: "https://instagram.com/tomsnaps96",
     tab: 0,
+  },
+  {
+    id: 4,
+    title: "Spotify",
+    url: "https://open.spotify.com/user/djw0bbl3",
+    tab: 2,
   },
 ];
 

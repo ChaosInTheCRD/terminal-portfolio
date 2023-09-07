@@ -39,8 +39,8 @@ const Projects: React.FC = () => {
   ) : (
     <div data-testid="projects">
       <ProjectsIntro>
-        “Talk is cheap. Show me the code”? I got you. <br />
-        Here are some of my projects you shouldn't misss
+        All my projects are messy and don't have a bow tied round them, it's just the way it is! <br />
+        Be prepared to roll your sleeves up and do some compiling and bug fixing 😈
       </ProjectsIntro>
       {projects.map(({ id, title, desc }) => (
         <ProjectContainer key={id}>
@@ -56,27 +56,27 @@ const Projects: React.FC = () => {
 const projects = [
   {
     id: 1,
-    title: "Sat Naing's Blog",
-    desc: "My personal blog where I can write down my thoughts and experiences.",
-    url: "https://satnaing.dev/blog/",
+    title: "Dexter",
+    desc: "Trust Dexter to ensure that all your images are pinned by digest for better security.",
+    url: "https://github.com/chaosinthecrd/dexter",
   },
   {
     id: 2,
-    title: "Haru Fashion",
-    desc: "An ecommerce web application where users can browse various products and make purchases.",
-    url: "https://haru-fashion.vercel.app/",
+    title: "Mandark (unfinished)",
+    desc: "Spoiling Dexter's fun by checking pinned container image references for cosign policy violations.",
+    url: "https://github.com/chaosinthecrd/mandark",
   },
   {
     id: 3,
-    title: "Haru API",
-    desc: "A RESTful API developed for the Haru fashion ecommerce project.",
-    url: "https://satnaing.github.io/haru-api/",
+    title: "Attestagon (unfinished)",
+    desc: "Create SLSA Provenance attestations for Kubernetes Pods using Tetragon events.",
+    url: "https://github.com/chaosinthecrd/attestagon",
   },
   {
     id: 4,
-    title: "AstroPaper Blog Theme",
-    desc: "A minimal, accessible and SEO-friendly Astro blog theme.",
-    url: "https://astro-paper.pages.dev/",
+    title: "kube-lock",
+    desc: "A pane of glass between you and your Kubernetes clusters.",
+    url: "https://github.com/chaosinthecrd/kube-lock",
   },
 ];
 

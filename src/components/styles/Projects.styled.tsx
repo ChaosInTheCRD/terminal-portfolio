@@ -22,3 +22,11 @@ export const ProjectDesc = styled.div`
   line-height: 1.5rem;
   max-width: 500px;
 `;
+
+// Adding this here as it is not worth creating another stylesheet
+export const TalkDesc = styled.div`
+  color: ${({ theme }) => theme.colors?.text[200]};
+  text-align: justify;
+  line-height: 1.5rem;
+  max-width: 1000px;
+`;

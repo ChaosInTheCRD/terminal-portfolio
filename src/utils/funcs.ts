@@ -121,20 +121,20 @@ export const argTab = (
   }
 
   // 5) if input is 'projects' or 'socials'
-  else if (inputVal === "projects " || inputVal === "socials ") {
+  else if (inputVal === "projects " || inputVal === "socials " || inputVal === "talks ") {
     setInputVal(`${inputVal}go`);
     return [];
   }
 
   // 6) if input is 'projects g' or 'socials g'
-  else if (inputVal === "projects g" || inputVal === "socials g") {
+  else if (inputVal === "projects g" || inputVal === "socials g" || inputVal === "talks g") {
     setInputVal(`${inputVal}o`);
     return [];
   }
 
   // 7) if input is 'socials go '
   else if (_.startsWith(inputVal, "socials go ")) {
-    ["1.Github", "2.Dev.to", "3.Facebook", "4.Instagram"].forEach(t => {
+    ["1.Github", "2.Linkedin", "3.Instagram", "4.Spotify"].forEach(t => {
       hintsCmds = [...hintsCmds, t];
     });
     return hintsCmds;
@@ -143,10 +143,23 @@ export const argTab = (
   // 8) if input is 'projects go '
   else if (_.startsWith(inputVal, "projects go ")) {
     [
-      "1.Sat Naing's Blog",
-      "2.Haru Fashion",
-      "3.Haru API",
-      "4.AstroPaper Blog Theme",
+      "1.Dexter",
+      "2.Mandark (unfinished)",
+      "3.Attestagon (unfinished)",
+      "4.kube-lock",
+    ].forEach(t => {
+      hintsCmds = [...hintsCmds, t];
+    });
+    return hintsCmds;
+  }
+
+  // 9) if input is 'projects go '
+  else if (_.startsWith(inputVal, "projects go ")) {
+    [
+      "1.Cert-Manager Can Do SPIFFE? Solving Multi-Cloud Workload Identity Using a De Facto Standard Tool",
+      "2.Building a Portable Kubernetes Deployment Pipeline with Argo Workflows and Events",
+      "3.The Scanner is Not Enough: Approaches to SBOM Generation",
+      "4.Why am I here?",
     ].forEach(t => {
       hintsCmds = [...hintsCmds, t];
     });

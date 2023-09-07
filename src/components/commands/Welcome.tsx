@@ -15,64 +15,99 @@ const Welcome: React.FC = () => {
       <div className="info-section">
         <PreName>
           {`        
-    _____       __     _   __      _            
-   / ___/____ _/ /_   / | / /___ _(_)___  ____ _
-   \\__ \\/ __ \`/ __/  /  |/ / __ \`/ / __  / __ \`/
-  ___/ / /_/ / /_   / /|  / /_/ / / / / / /_/ / 
- /____/\\__,_/\\___/ /_/ |_/\\__,_/_/_/ /_/\\__, /  
-                                       /____/   
+╭━━━┳╮╱╭┳━━━┳━━━┳━━━┳━━┳━╮╱╭┳━━━━┳╮╱╭┳━━━┳━━━┳━━━┳━━━╮
+┃╭━╮┃┃╱┃┃╭━╮┃╭━╮┃╭━╮┣┫┣┫┃╰╮┃┃╭╮╭╮┃┃╱┃┃╭━━┫╭━╮┃╭━╮┣╮╭╮┃
+┃┃╱╰┫╰━╯┃┃╱┃┃┃╱┃┃╰━━╮┃┃┃╭╮╰╯┣╯┃┃╰┫╰━╯┃╰━━┫┃╱╰┫╰━╯┃┃┃┃┃
+┃┃╱╭┫╭━╮┃╰━╯┃┃╱┃┣━━╮┃┃┃┃┃╰╮┃┃╱┃┃╱┃╭━╮┃╭━━┫┃╱╭┫╭╮╭╯┃┃┃┃
+┃╰━╯┃┃╱┃┃╭━╮┃╰━╯┃╰━╯┣┫┣┫┃╱┃┃┃╱┃┃╱┃┃╱┃┃╰━━┫╰━╯┃┃┃╰┳╯╰╯┣╮
+╰━━━┻╯╱╰┻╯╱╰┻━━━┻━━━┻━━┻╯╱╰━╯╱╰╯╱╰╯╱╰┻━━━┻━━━┻╯╰━┻━━━┻╯
           `}
         </PreName>
         <PreWrapper>
           <PreNameMobile>
             {`
-    ____     __          
-   / __/__ _/ /_         
-  _\\ \\/ _ \`/ __/         
- /___/\\_,_/\\__/          
-    _  __     _          
-   / |/ /__ _(_)__  ___ _
-  /    / _ \`/ / _ \\/ _ \`/
- /_/|_/\\_,_/_/_//_/\\_, / 
-                  /___/  
- 
+
+╭━━━┳╮╱╭┳━━━┳━━━┳━━━╮
+┃╭━╮┃┃╱┃┃╭━╮┃╭━╮┃╭━╮┃
+┃┃╱╰┫╰━╯┃┃╱┃┃┃╱┃┃╰━━╮
+┃┃╱╭┫╭━╮┃╰━╯┃┃╱┃┣━━╮┃
+┃╰━╯┃┃╱┃┃╭━╮┃╰━╯┃╰━╯┃
+╰━━━┻╯╱╰┻╯╱╰┻━━━┻━━━╯
+╭━━┳━╮╱╭┳━━━━┳╮╱╭┳━━━╮
+╰┫┣┫┃╰╮┃┃╭╮╭╮┃┃╱┃┃╭━━╯
+╱┃┃┃╭╮╰╯┣╯┃┃╰┫╰━╯┃╰━━╮
+╱┃┃┃┃╰╮┃┃╱┃┃╱┃╭━╮┃╭━━╯
+╭┫┣┫┃╱┃┃┃╱┃┃╱┃┃╱┃┃╰━━╮
+╰━━┻╯╱╰━╯╱╰╯╱╰╯╱╰┻━━━╯
+    ╭━━━┳━━━┳━━━╮
+    ┃╭━╮┃╭━╮┣╮╭╮┃
+    ┃┃╱╰┫╰━╯┃┃┃┃┃
+    ┃┃╱╭┫╭╮╭╯┃┃┃┃
+    ┃╰━╯┃┃┃╰┳╯╰╯┣╮
+    ╰━━━┻╯╰━┻━━━┻╯
           `}
           </PreNameMobile>
         </PreWrapper>
-        <div>Welcome to my terminal portfolio. (Version 1.3.1)</div>
+        <div>Welcome to my personal website 😀</div>
         <Seperator>----</Seperator>
         <div>
-          This project's source code can be found in this project's{" "}
-          <Link href="https://github.com/satnaing/terminal-portfolio">
-            GitHub repo
+          Please check out my{" "}
+          <Link href="https://github.com/chaosinthecrd">
+            GitHub
           </Link>
           .
         </div>
         <Seperator>----</Seperator>
         <div>
-          For a list of available commands, type `<Cmd>help</Cmd>`.
+          For a list of available commands, type `<Cmd>help</Cmd>` or `<Cmd>ls</Cmd>.
         </div>
       </div>
       <div className="illu-section">
         <PreImg>
           {`
-                       ,##,,eew,
-                     ,##############C
-                  a###############@##
-                 7####^\`^"7W7^"@####
-                 @#@b\`         ^@#@^
-                  ##^,,,,   ,,,,^#^
-                 ,,@######"#######=
-                  .''555"\` '5555b|
-                  T"@  ,,,^,mg,@,*
-                     %p||\`~~'.#\`
-                      ^Wp  ,#T
-                     :b''@@b^}
-                  ,^     \` 'b 3-
-              .<\` 'p   ^v   #   b   *.
-            {      }   #"GpGb   [
-            C      3 * @#######Nl      \`
-           '            ^@##b     ($    !
+                             WNK00000KNW                                  
+             WNNWW         WXOO0Odddddx0W                                 
+         WNKOkxxkO0XW      NOONKxxkkkxddK                                 
+        N0xddddddddxOX     Xk0Xxoxkkkxdd0W                                
+       W0ddddddddddddxKW   KoxOooxkkkxll0                                 
+     NOxooodddddddddddxX   0lodldxkkxo:oK                                 
+     W0doollooddddddddokXN NOolldkkxxlckN                                 
+      WKdooolloddddddlldx0X0koldxxxOKKKN                                  
+       WKxoooolodddddolllddolloddx0W                                      
+         NOdooooxOkxdlclooollloooOW                                       
+          WKkoooxKNKxlloolclodddxK                                        
+            WKkooxKKdoolllldddddkN                                        
+  WNXKKKKXNW  WKkddollollloddddxKW                                        
+WKkxddddddxkOXW N0xoodddddoloddON                                         
+W0dddddddddddxkK0xxxkkkxxdodxxxkk0XNW                                     
+ W0xdddddddddddddodxkkxoloxkkxddoloxON                                    
+  WXkdddddddddddddodxxoooxOKX0dloooooOW                                   
+    WKkxdddddddddddkKkok000OkxollccccokKXXXXXXNNNW                        
+ WX000Okdoodxxxxxxxk0kddddolllccllloooodxxxxdxxxxON                       
+ Xkxkkkkxxdxk0KXNNNKxdollllloodddddddddddddddddxkOX                       
+ WXK0Okxkkxkxxk0KX0kxdolcccldddddddddddddddxO0KNWW                        
+     WXK0OkkxxkkxxxkxdoolllloddddddddxxkOKXNW                             
+    WNXK0OkxxxkOOOOOkdooddxk0K0kxddxk0NW                                  
+  WKOxddddddddxk0NWWXkx0NNNNK0OkxxxxxkX                                   
+ NOddddddddddddddkKXOdxk00OkxxkkkkkkxON                                   
+W0ddddddddddddddxdooodxkkkkkkkkkkxxdxKW                                   
+ WX0OkxxxxxxkOOkxdllclodddxxkkkOOkxkO00KN                                 
+     WNNNXXNNWXxoollllllllx000KXNNW WWWNW                                 
+           WNXOolooooolc:clolokOOOX                                       
+         N0xolc::cllcc:::::::coxO0N                                       
+       NOdc:::::::::::cc::cc::::cldKW                                     
+       0l:::::::c::cc:c::cc:c:::c:coK                                     
+      Nxc:::::ccc:c::cccccccc::::::cxN                                    
+     WOl:::ldO0kxl:coxkkOOkoc::::c::ckW                                   
+    W0l:::lO0K000kocdOOOO0K0d::::::::l0W                                  
+    Xo::::okkxkkOOdcllldxkO0xc:::::::cdX                                  
+    0l:cc::c::ccodl::c:cccllccccc:cc::l0                                  
+    0c;;;;;;;;;;;;;;;;;;;;;;,,;;::;::;lOW                                 
+   Xo'....'..'''......'....''',,;;;;:cclOW                                
+  No'..'.'''''''''''''''''',;;;;;:::cclllOW                               
+ Nx;'',,,,'',''''',,,,,,,,;;;;;;:::::::ccckN                              
+ Kdlllllc::::::::::::::::::::::::::clllcccdX                              
+ NKKKKKKK000000OOO0000000000000000KKKKKKKKXW                              
          `}
         </PreImg>
       </div>
