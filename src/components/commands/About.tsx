@@ -4,7 +4,7 @@ import {
   HighlightSpan,
 } from "../styles/About.styled";
 
-import { Cmd } from "../styles/Welcome.styled.tsx";
+import { Cmd } from "../styles/Welcome.styled";
 
 const About: React.FC = () => {
   return (
