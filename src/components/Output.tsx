@@ -1,6 +1,7 @@
 import About from "./commands/About";
 import Clear from "./commands/Clear";
 import Echo from "./commands/Echo";
+import NowPlaying from "./commands/NowPlaying";
 import Education from "./commands/Education";
 import Email from "./commands/Email";
 import GeneralOutput from "./commands/GeneralOutput";
@@ -46,7 +47,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           talks: <Talks />,
           pwd: <GeneralOutput>/home/chaosinthecrd</GeneralOutput>,
           easteregg: <GeneralOutput>Something exciting coming soon! It's not easter just yet 😉</GeneralOutput>,
-          nowplaying: <GeneralOutput>Coming Soon...</GeneralOutput>,
+          nowplaying: <NowPlaying />,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,
