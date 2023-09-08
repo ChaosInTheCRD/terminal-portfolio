@@ -23,7 +23,7 @@ const NowPlaying: React.FC = () => {
 
    return (
     <Wrapper>
-      I'm currently listening to {song.name} by {song.artist} 🧘‍♀️🏡🎧
+      I'm currently listening to {song['name']} by {song['artist']} 🧘‍♀️🏡🎧
     </Wrapper>
    );
 };
