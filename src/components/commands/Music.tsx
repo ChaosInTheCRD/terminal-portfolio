@@ -28,12 +28,12 @@ const Music: React.FC = () => {
   const a = (song as any).artist
   const l = (song as any).previewURL
 
-  if (song.name === undefined) {
+  if (s === undefined) {
     <Wrapper>
     </Wrapper>
   }
 
-  if (song.name != null && song.name != "") {
+  if (s != null && s != "") {
      outputStr = "I'm currently listening to " + s + " by " + a + " 🧘‍♀️🏡🎧";
   } else if (song.name == "") {
      outputStr = "I'm not currently listening to anything 😴";
@@ -66,10 +66,5 @@ const Music: React.FC = () => {
 };
 
 export default Music;
-
-function handleEnded() {
-    setActiveSong(false);
-}
-
 
 
