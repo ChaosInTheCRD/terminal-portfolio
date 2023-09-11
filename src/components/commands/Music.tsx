@@ -35,7 +35,7 @@ const Music: React.FC = () => {
 
   if (s != null && s != "") {
      outputStr = "I'm currently listening to " + s + " by " + a + " 🧘‍♀️🏡🎧";
-  } else if (song.name == "") {
+  } else if (s == "") {
      outputStr = "I'm not currently listening to anything 😴";
   }
 
