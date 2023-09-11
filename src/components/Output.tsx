@@ -10,6 +10,7 @@ import Welcome from "./commands/Welcome";
 import History from "./commands/History";
 import Projects from "./commands/Projects";
 import Talks from "./commands/Talks";
+import CV from "./commands/CV";
 import Socials from "./commands/Socials";
 import Themes from "./commands/Themes";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
@@ -39,6 +40,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           clear: <Clear />,
           echo: <Echo />,
           education: <Education />,
+          cv: <CV />,
           email: <Email />,
           help: <Help />,
           ls: <Help />,

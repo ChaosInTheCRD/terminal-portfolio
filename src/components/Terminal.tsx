@@ -31,6 +31,7 @@ export const commands: Command = [
   { cmd: "clear", desc: "clear the terminal", tab: 8 },
   { cmd: "echo", desc: "print out anything", tab: 9 },
   { cmd: "education", desc: "my education background", tab: 4 },
+  { cmd: "cv", desc: "download my CV in PDF form", tab: 4 },
   { cmd: "email", desc: "send an email to me", tab: 8 },
   { cmd: "help", desc: "check available commands", tab: 9 },
   { cmd: "ls", desc: "same as help :)", tab: 11},

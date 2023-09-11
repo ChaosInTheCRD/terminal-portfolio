@@ -55,6 +55,15 @@ export const checkRedirect = (
   currentCommand.length < 4 && // if num of arg is valid (not `projects go 1 sth`)
   _.includes([1, 2, 3, 4], parseInt(currentCommand[2])); // arg last part is one of id
 
+
+export const checkDownload = (
+  rerender: boolean,
+  currentCommand: string[],
+  command: string
+): boolean =>
+  rerender && // is submitted
+  currentCommand[0] === command; // current command starts with ('socials'|'projects')
+
 /**
  * Check current render makes redirect for theme
  * @param {boolean} rerender - is submitted or not

@@ -3,8 +3,6 @@ import _ from "lodash";
 import { Wrapper } from "../styles/Output.styled";
 import { termContext } from "../Terminal";
 
-
-
 let outputStr = ""
 const Music: React.FC = () => {
   const [song, setSong] = useState(false)
@@ -21,8 +19,8 @@ const Music: React.FC = () => {
   }
 
   useEffect(() => {
-    fetchUserData()
-  }, [])
+      fetchUserData()
+  }, []);
 
   const s = (song as any).name
   const a = (song as any).artist
@@ -40,7 +38,6 @@ const Music: React.FC = () => {
   }
 
   const audio = new Audio(l);
-  audio.loop = true;
 
    return (
     <div>
@@ -50,14 +47,12 @@ const Music: React.FC = () => {
       <div>
         <button
           onClick={() => {
-            audio.loop = true;
             audio.play();
           }}
         >
           Play
         </button>
         <button onClick={() => {
-        audio.loop = false;
         audio.pause();
         }}>Pause</button>
       </div>
