@@ -38,7 +38,7 @@ export const commands: Command = [
   { cmd: "projects", desc: "view projects that I've coded", tab: 5 },
   { cmd: "talks", desc: "view talks that I've given", tab: 8},
   { cmd: "pwd", desc: "print current working directory", tab: 10 },
-  { cmd: "nowplaying", desc: "see what I'm listening to right now", tab: 3 },
+  { cmd: "music", desc: "see what I'm listening to right now", tab: 3 },
   { cmd: "socials", desc: "check out my social accounts", tab: 6 },
   { cmd: "themes", desc: "check available themes", tab: 7 },
   { cmd: "welcome", desc: "display hero section", tab: 6 },
