@@ -64,6 +64,7 @@ export const checkDownload = (
   rerender && // is submitted
   currentCommand[0] === command; // current command starts with ('socials'|'projects')
 
+
 /**
  * Check current render makes redirect for theme
  * @param {boolean} rerender - is submitted or not

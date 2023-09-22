@@ -1,31 +1,31 @@
-import { usecontext, useeffect } from "react";
-import { projectsintro } from "../styles/projects.styled";
-import { cmd, cmddesc, cmdlist, helpwrapper } from "../styles/help.styled";
+import { useContext, useEffect } from "react";
+import { ProjectsIntro } from "../styles/Projects.styled";
+import { Cmd, CmdDesc, CmdList, HelpWrapper } from "../styles/Help.styled";
 import {
-  checkdownload,
-  getcurrentcmdarry,
+  checkDownload,
+  getCurrentCmdArry,
 } from "../../utils/funcs";
-import { termcontext } from "../terminal";
-import usage from "../usage";
+import { termContext } from "../Terminal";
+import Usage from "../Usage";
 
-const blog: react.fc = () => {
-  const { arg, history, rerender } = usecontext(termcontext);
+const Blog: React.FC = () => {
+  const { arg, history, rerender } = useContext(termContext);
 
   /* ===== get current command ===== */
-  const currentcommand = getcurrentcmdarry(history);
+  const currentCommand = getCurrentCmdArry(history);
 
   /* ===== check current command makes redirect ===== */
-  useeffect(() => {
-    if (checkdownload(rerender, currentcommand, "")) {
-      window.open("https://drive.google.com/uc?export=download&id=1nkb12bisyxdo-fuf6ishciwa1nafyqdi")
+  useEffect(() => {
+    if (rerender) {
+      window.open("https://blog.chaosinthe.dev")
     }
-  }, [arg, rerender, currentcommand]);
+  }, [arg, rerender, currentCommand]);
 
   return (
-    <helpwrapper>
-    have fun at the blog!
-    </helpwrapper>
+    <HelpWrapper>
+      Enjoy the blog!
+    </HelpWrapper>
   );
 };
 
-export default blog;
+export default Blog;
