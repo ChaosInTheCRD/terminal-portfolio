@@ -2,6 +2,7 @@ import About from "./commands/About";
 import Clear from "./commands/Clear";
 import Echo from "./commands/Echo";
 import Music from "./commands/Music";
+import Blog from "./commands/Blog"
 import Education from "./commands/Education";
 import Email from "./commands/Email";
 import GeneralOutput from "./commands/GeneralOutput";
@@ -50,6 +51,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           pwd: <GeneralOutput>/home/chaosinthecrd</GeneralOutput>,
           easteregg: <GeneralOutput>Something exciting coming soon! It's not easter just yet 😉</GeneralOutput>,
           music: <Music />,
+          blog: <Blog />,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,
