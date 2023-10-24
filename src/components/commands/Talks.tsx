@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
           <TalkDesc>{desc}</TalkDesc>
         </ProjectContainer>
       ))}
-      <Usage cmd="projects" marginY />
+      <Usage cmd="talks" marginY />
     </div>
   );
 };

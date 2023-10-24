@@ -16,7 +16,7 @@ const Blog: React.FC = () => {
 
   /* ===== check current command makes redirect ===== */
   useEffect(() => {
-    if (rerender) {
+    if (checkDownload(rerender, currentCommand, "blog")) {
       window.open("https://blog.chaosinthe.dev")
     }
   }, [arg, rerender, currentCommand]);
