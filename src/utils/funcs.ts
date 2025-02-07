@@ -1,5 +1,6 @@
 import _ from "lodash";
 import theme from "../components/styles/themes";
+import { Doc } from "contentlayer/generated"
 
 /**
  * Generates html tabs
@@ -26,6 +27,19 @@ export const isArgInvalid = (
   action: string,
   options: string[]
 ) => arg[0] !== action || !_.includes(options, arg[1]) || arg.length > 2;
+
+/**
+ * Check arg is valid
+ * @param {string[]} arg - The arg array
+ * @param {string} action - The action to compare | "go" | "set"
+ * @param {string[]} options - Option array to compare | "dark" | "1"
+ * @returns {boolean} boolean
+ */
+export const isBlogArgInvalid = (
+  arg: string[],
+  action: string,
+  numDocs: number,
+) => arg[0] !== action || parseInt(arg[1]) > numDocs || parseInt(arg[1]) < numDocs || arg.length > 2;
 
 /**
  * Transform current cmd & arg into array
@@ -131,13 +145,13 @@ export const argTab = (
   }
 
   // 5) if input is 'projects' or 'socials'
-  else if (inputVal === "projects " || inputVal === "socials " || inputVal === "talks ") {
+  else if (inputVal === "projects " || inputVal === "socials " || inputVal === "talks " || inputVal === "blog") {
     setInputVal(`${inputVal}go`);
     return [];
   }
 
   // 6) if input is 'projects g' or 'socials g'
-  else if (inputVal === "projects g" || inputVal === "socials g" || inputVal === "talks g") {
+  else if (inputVal === "projects g" || inputVal === "socials g" || inputVal === "talks g" || inputVal === "blog g") {
     setInputVal(`${inputVal}o`);
     return [];
   }
@@ -164,13 +178,22 @@ export const argTab = (
   }
 
   // 9) if input is 'projects go '
-  else if (_.startsWith(inputVal, "projects go ")) {
+  else if (_.startsWith(inputVal, "talks go ")) {
     [
       "1.Cert-Manager Can Do SPIFFE? Solving Multi-Cloud Workload Identity Using a De Facto Standard Tool",
       "2.Building a Portable Kubernetes Deployment Pipeline with Argo Workflows and Events",
       "3.The Scanner is Not Enough: Approaches to SBOM Generation",
       "4.Why am I here?",
     ].forEach(t => {
+      hintsCmds = [...hintsCmds, t];
+    });
+    return hintsCmds;
+  }
+
+
+  // 10) if input is 'blogs go '
+  else if (_.startsWith(inputVal, "blog go ")) {
+    ["1.Github", "2.Linkedin", "3.Instagram", "4.Spotify"].forEach(t => {
       hintsCmds = [...hintsCmds, t];
     });
     return hintsCmds;

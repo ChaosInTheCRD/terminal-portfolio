@@ -1,13 +1,14 @@
 import { UsageDiv } from "./styles/Output.styled";
 
 type Props = {
-  cmd: "themes" | "projects" | "socials" | "talks";
+  cmd: "themes" | "projects" | "socials" | "talks" | "blog";
   marginY?: boolean;
 };
 
 const arg = {
   themes: { placeholder: "theme-name", example: "ubuntu" },
   projects: { placeholder: "project-no", example: "4" },
+  blog: { placeholder: "blog-no", example: "3" },
   talks: { placeholder: "talk-no", example: "2" },
   socials: { placeholder: "social-no", example: "1" },
 };

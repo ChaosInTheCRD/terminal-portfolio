@@ -1,30 +1,43 @@
-import { useContext, useEffect } from "react";
-import { ProjectsIntro } from "../styles/Projects.styled";
-import { Cmd, CmdDesc, CmdList, HelpWrapper } from "../styles/Help.styled";
+import { useContext } from "react";
+import { allDocs } from "contentlayer/generated"
 import {
-  checkDownload,
-  getCurrentCmdArry,
+  isBlogArgInvalid,
 } from "../../utils/funcs";
 import { termContext } from "../Terminal";
 import Usage from "../Usage";
+import { parseInt } from "lodash";
 
 const Blog: React.FC = () => {
-  const { arg, history, rerender } = useContext(termContext);
+  const { arg } = useContext(termContext);
 
-  /* ===== get current command ===== */
-  const currentCommand = getCurrentCmdArry(history);
+  const docs = allDocs
+  const doc = allDocs.at(parseInt(arg[1]))
 
-  /* ===== check current command makes redirect ===== */
-  useEffect(() => {
-    if (checkDownload(rerender, currentCommand, "blog")) {
-      window.open("https://blog.chaosinthe.dev")
-    }
-  }, [arg, rerender, currentCommand]);
+  if (!doc) {
+    return <div>Document not found or invalid argument.</div>;
+  }
 
-  return (
-    <HelpWrapper>
-      Enjoy the blog!
-    </HelpWrapper>
+  /* ===== check arg is valid ===== */
+  const checkArg = () =>
+    <Usage cmd="blog" />
+  isBlogArgInvalid(arg, "go", docs.length) ? (
+    <Usage cmd="blog" />
+  ) : null;
+
+  return doc ? (
+    <div data-testid="blog" >
+      <article className="mx-auto max-w-xl py-8">
+        <div className="mb-8 text-center">
+          <h1 className="text-3xl font-bold">{doc.title}</h1>
+        </div>
+        <div
+          className="[&>*]:mb-4 [&>*:last-child]:mb-0 leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: doc.body.html }}
+        />
+      </article>
+    </div>
+  ) : (
+    checkArg()
   );
 };
 

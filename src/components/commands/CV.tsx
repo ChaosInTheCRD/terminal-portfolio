@@ -23,7 +23,7 @@ const CV: React.FC = () => {
 
   return (
     <HelpWrapper>
-    Please see CV attached (in the downloads folder 📬)
+      Please see CV attached (in the downloads folder 📬)
     </HelpWrapper>
   );
 };
