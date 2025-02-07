@@ -21,7 +21,7 @@ const Photos: React.FC = () => {
 
   return (
     <HelpWrapper>
-      Enjoy the blog!
+      Enjoy the photos!
     </HelpWrapper>
   );
 };
