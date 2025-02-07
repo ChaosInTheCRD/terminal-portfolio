@@ -3,6 +3,7 @@ import Clear from "./commands/Clear";
 import Echo from "./commands/Echo";
 import Music from "./commands/Music";
 import Blog from "./commands/Blog"
+import Photos from "./commands/Photos"
 import Education from "./commands/Education";
 import Email from "./commands/Email";
 import GeneralOutput from "./commands/GeneralOutput";
@@ -52,6 +53,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           easteregg: <GeneralOutput>Something exciting coming soon! It's not easter just yet 😉</GeneralOutput>,
           music: <Music />,
           blog: <Blog />,
+          photos: <Photos />,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,
